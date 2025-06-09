@@ -1,0 +1,28 @@
+@import "tailwindcss";
+
+.scrollbar-stable {
+    scrollbar-gutter: stable;
+}
+
+/* Tailwind config or global CSS */
+.hide-scrollbar::-webkit-scrollbar {
+    display: none;
+  }
+  .hide-scrollbar {
+    -ms-overflow-style: none;  /* IE/Edge */
+    scrollbar-width: 12px;     /* Firefox */
+  }
+
+/* responsive */
+
+  .responsive-image {
+    @apply max-h-[50vh] w-full object-cover;
+  
+    @media (min-width: 768px) {
+      @apply max-h-[75vh];
+    }
+  
+    @media (min-width: 1024px) {
+      @apply max-h-[85vh];
+    }
+}
